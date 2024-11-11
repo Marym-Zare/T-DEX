@@ -1,26 +1,45 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "./core/Button";
+import { useEffect, useState } from "react";
 const Header = () => {
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     isActive ? "text-[#54BBF4] font-bold" : "text-white font-normal";
 
+  const [small, setSmall] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        setSmall(window.pageYOffset > 200)
+      );
+    }
+  }, []);
+
   return (
-    <div className="container mx-auto sm:px-0">
-      <header className="flex justify-between items-center py-2 sm:py-5 curve-bottom">
-        <img src="/Logo.svg" alt="T_DEX" className="w-auto h-4" />
+    <div className={`container mx-auto sm:px-0 sticky top-0`}>
+      <header
+        className={`flex justify-between items-center py-2 sm:py-5 curve-bottom ${
+          small
+            ? "bg-[#0D0D0D] opacity-90 blur-xl transition-all duration-500 ease-in-out"
+            : ""
+        }`}
+      >
+        <Link to="/">
+          <img src="/Logo.svg" alt="T_DEX" className="w-auto h-4" />
+        </Link>
         <nav className="md:block hidden">
           <ul className="flex gap-10 text-white">
             <NavLink className={linkClass} to="/Tokenomics">
-              <li>Tokenomics</li>
+              <li className="hover:text-[#54BBF4]">Tokenomics</li>
             </NavLink>
             <NavLink className={linkClass} to="AboutUs">
-              <li>About us</li>
+              <li className="hover:text-[#54BBF4]">About us</li>
             </NavLink>
             <NavLink className={linkClass} to="Airdrop">
-              <li>Airdrop</li>
+              <li className="hover:text-[#54BBF4]">Airdrop</li>
             </NavLink>
             <NavLink className={linkClass} to="TradeBot">
-              <li>TradeBot</li>
+              <li className="hover:text-[#54BBF4]">TradeBot</li>
             </NavLink>
           </ul>
         </nav>

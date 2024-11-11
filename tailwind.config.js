@@ -24,12 +24,12 @@ export default {
       //   'gradient-end': '#0D0D0D',
       // },
       animation: {
-        marquee: 'marquee 10s linear infinite',
+        marquee: 'marquee 6s linear infinite',
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(-110%)' },
-          '100%': { transform: 'translateX(110%)' },
+          '0%': { transform: 'translateX(-70%)' },
+          '100%': { transform: 'translateX(70%)' },
         },
       },
     },

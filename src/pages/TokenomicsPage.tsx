@@ -4,7 +4,7 @@ import DistributionItem from "../components/Tokenomics/DistributionItem";
 const TokenomicsPage = () => {
   return (
     <section className="container mx-auto">
-      <div className="flex justify-between items-start w-full mt-20 mb-20">
+      <div className="flex justify-between items-start w-full mt-20 mb-[120px]">
         <div className="w-[45%]">
           <p className="text-xl font-normal text-white mb-2">
             Turning Donations Into Profit
@@ -51,9 +51,14 @@ const TokenomicsPage = () => {
           </div>
         </div>
       </div>
+      <div className="w-full flex justify-center mb-[120px]">
+        <div className="w-[80%]">
+          <img src="/TimeLine.png" alt="Time Line" />
+        </div>
+      </div>
       <div className="pt-16 pl-11 pr-5 bg-[#121212] rounded-xl flex justify-between items-start w-full pb-24">
         <div className="w-[40%]">
-          <img src="/PieChart.svg" alt="Pie Chart" />
+          <img src="/PieChart2.png" alt="Pie Chart" />
         </div>
         <div className="w-[60%]">
           <div className="mb-20 text-left">

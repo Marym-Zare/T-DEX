@@ -33,7 +33,7 @@ const CustomButton = ({
   return (
     <button
       className={`
-        py-[9px] px-14 sm:px-14
+        py-[9px] md:px-14 px-[47px]
         text-base font-normal
         bg-[#C0C0C0] text-[#0F0F0F]
         ${fullHeight ? "h-full" : ""}
