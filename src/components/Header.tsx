@@ -10,17 +10,17 @@ const Header = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () =>
-        setSmall(window.pageYOffset > 200)
+        setSmall(window.pageYOffset > 40)
       );
     }
   }, []);
 
   return (
-    <div className={`container mx-auto sm:px-0 sticky top-0`}>
+    <div className={`container mx-auto sm:px-0 sticky top-0 z-20`}>
       <header
-        className={`flex justify-between items-center py-2 sm:py-5 curve-bottom ${
+        className={`flex justify-between items-center py-2 sm:py-5 curve-bottom bg-[#0D0D0D/20] ${
           small
-            ? "bg-[#0D0D0D] opacity-90 blur-xl transition-all duration-500 ease-in-out"
+            ? "backdrop-blur-xl transition-all duration-1000 ease-out"
             : ""
         }`}
       >
