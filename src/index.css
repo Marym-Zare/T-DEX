@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  background-color: #0D0D0D;
+  background-color: #0d0d0d;
 }
 
-  /* scroll-behavior: smooth; */
-  /* scrollbar-width: none; Also needed to disable scrollbar Firefox */
-  /* -ms-overflow-style: none; Disable scrollbar IE 10+ */
-  /* scrollbar-color: transparent transparent; */
+/* scroll-behavior: smooth; */
+/* scrollbar-width: none; Also needed to disable scrollbar Firefox */
+/* -ms-overflow-style: none; Disable scrollbar IE 10+ */
+/* scrollbar-color: transparent transparent; */
 
 /* body::-webkit-scrollbar { */
-  /* display: none; */
-  /* scrollbar-width: none; Also needed to disable scrollbar Firefox */
-  /* -ms-overflow-style: none; Disable scrollbar IE 10+ */
-  /* scrollbar-color: transparent transparent; */
+/* display: none; */
+/* scrollbar-width: none; Also needed to disable scrollbar Firefox */
+/* -ms-overflow-style: none; Disable scrollbar IE 10+ */
+/* scrollbar-color: transparent transparent; */
 /* } */
 
 /* @layer utilities {
@@ -39,87 +39,96 @@
   }
 } */
 
-html{
-  font-family: "Roboto", sans-serif
+html {
+  font-family: "Roboto", sans-serif;
 }
 
 .curve-bottom {
   position: relative;
-  border-bottom: 1px solid #4A4B54;
- }
- .curve-bottom::before {
+  border-bottom: 1px solid #4a4b54;
+}
+.curve-bottom::before {
   content: "";
   width: 35px;
   height: 1px;
-  background-color: #4A4B54;
+  background-color: #4a4b54;
   position: absolute;
   bottom: 12px;
   left: -28px;
   rotate: 50deg;
- }
- .curve-bottom::after {
+}
+.curve-bottom::after {
   content: "";
   width: 35px;
   height: 1px;
-  background-color: #4A4B54;
+  background-color: #4a4b54;
   position: absolute;
   bottom: -14px;
   right: -28px;
   rotate: 50deg;
- }
+}
 
- .curve-bottom-2 {
+.curve-bottom-2 {
   position: relative;
-  border-bottom: 1px solid #4A4B54;
- }
+  border-bottom: 1px solid #4a4b54;
+}
 
- .curve-bottom-2::after {
+.curve-bottom-2::after {
   content: "";
   width: 20px;
   height: 1px;
-  background-color: #4A4B54;
+  background-color: #4a4b54;
   position: absolute;
   bottom: -9px;
   right: -16px;
   rotate: 50deg;
- }
+}
 
-
- .banner-text {
-  color: #0D0D0D;
-  background: -webkit-linear-gradient(-90deg, #54BBF4 0%, #0D0D0D 77%);
+.banner-text {
+  color: #0d0d0d;
+  background: -webkit-linear-gradient(-90deg, #54bbf4 0%, #0d0d0d 77%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 2px transparent;
- }
- 
- .shape-container {
+}
+
+.shape-container {
   background-color: #000;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 16% 100%, 0 73%);
 }
 .shape-container::before {
   content: "";
   position: absolute;
-  top: -4px; 
+  top: -4px;
   left: -4px;
   right: -4px;
   bottom: -4px;
   clip-path: inherit;
-  background-color: white; 
+  background-color: white;
   z-index: -1;
 }
-.background-border{
-  background-image: url('/border.png');
+.background-border {
+  background-image: url("/border.png");
   background-size: 100% 100%;
 }
 
-.full-height{
-  height: calc(100vh - 130px)
+@media screen and (max-width: 768px) {
+  .background-border {
+    background-image: url("/BorderMobile.png");
+    background-size: 100% 100%;
+  }
+}
+
+.join-us-background-border {
+  background-image: url("JoinUsBorder.png");
+  background-size: 100% 100%;
+}
+
+.full-height {
+  height: calc(100vh - 130px);
 }
 
 @media screen and (max-width: 768px) {
-  .full-height{
-    height: auto
+  .full-height {
+    height: auto;
   }
-  
 }
-

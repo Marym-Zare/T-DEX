@@ -4,22 +4,11 @@ const JoinUs = ({ joinUsClassName }: { joinUsClassName?: string }) => {
       <p className="text-white text-base font-normal mb-3 pl-[5px]">
         Join Our Community
       </p>
-      <div className="relative w-[283px] h-[63px] flex justify-center items-center gap-x-8">
-        <img
-          className="absolute h-full w-full object-contain"
-          src="/JoinUsBorder.svg"
-          alt="Join Us Border"
-        />
-        <a
-          href="https://x.com/TdexTradeBot"
-          target="_blank"
-        >
+      <div className="w-[283px] h-[63px] join-us-background-border flex justify-center items-center gap-x-8">
+        <a href="https://x.com/TdexTradeBot" target="_blank">
           <img width={24} height={24} src="/X.svg" alt="X" />
         </a>
-        <a
-          href="https://t.me/Tdex_mvp_bot/Tdex_mvp_bot"
-          target="_blank"
-        >
+        <a href="https://t.me/Tdex_mvp_bot/Tdex_mvp_bot" target="_blank">
           <img width={24} height={24} src="/Telegrram.svg" alt="Telegrram" />
         </a>
         <a
@@ -28,10 +17,7 @@ const JoinUs = ({ joinUsClassName }: { joinUsClassName?: string }) => {
         >
           <img width={24} height={24} src="/Youtube.svg" alt="Youtube" />
         </a>
-        <a
-          href="https://warpcast.com/web3abracadabra"
-          target="_blank"
-        >
+        <a href="https://warpcast.com/web3abracadabra" target="_blank">
           <img width={24} height={24} src="/Farcaster.svg" alt="Farcaster" />
         </a>
       </div>
