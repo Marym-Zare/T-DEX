@@ -1,29 +1,65 @@
-import { Link, NavLink } from "react-router-dom";
-import { Button } from "./core/Button";
-import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom"
+import { Button } from "./core/Button"
+import { useEffect, useState } from "react"
 const Header = () => {
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-    isActive ? "text-[#54BBF4] font-bold" : "text-white font-normal";
+    isActive ? "text-[#54BBF4] font-bold" : "text-white font-normal"
 
-  const [small, setSmall] = useState(false);
+  const [small, setSmall] = useState(false)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () =>
         setSmall(window.pageYOffset > 40)
-      );
+      )
     }
-  }, []);
+  }, [])
 
   return (
     <div className={`container mx-auto sm:px-0 sticky top-0 z-20`}>
       <header
-        className={`flex justify-between items-center py-2 sm:py-5 curve-bottom bg-[#0D0D0D/20] ${
-          small
-            ? "backdrop-blur-xl transition-all duration-1000 ease-out"
-            : ""
-        }`}
+        className={`flex justify-between items-center py-2 sm:py-5 bg-[#0D0D0D/20] ${small
+          ? "backdrop-blur-xl transition-all duration-1000 ease-out"
+          : ""
+          }`}
       >
+        <svg className="absolute -bottom-3 header-svg-animate h-auto" viewBox="0 0 1570 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur1" />
+              <feFlood flood-color="#54BBF4" result="color" />
+              <feComposite in="color" in2="blur1" operator="in" />
+              <feMerge>
+                <feMergeNode in="blur1" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <path id="linePath" d="M1 0.5L21 20.5H1549L1569 40.5" stroke="#54BBF4" />
+
+          <path
+            id="photon"
+            d="M0 0 15-4C13.3333-4 16.6667-4 20-4 24-2 24 2 20 4L15 4"
+            fill="#54BBF4"
+            filter="url(#glowFilter)"
+          >
+            <animateMotion
+              dur="4s"
+              repeatCount="indefinite"
+              begin="0s; 2s"
+              keyTimes="0; 0.5; 1"
+              keySplines="0.42 0 1 1; 0 0 0.58 1">
+              <mpath xlinkHref="#linePath" />
+            </animateMotion>
+          </path>
+        </svg>
+
+
+
+
+
+
         <Link to="/">
           <img src="/Logo.svg" alt="T_DEX" className="w-auto h-4" />
         </Link>
@@ -50,8 +86,8 @@ const Header = () => {
           <img width={24} height={24} src="/Menu.svg" alt="Menu" />
         </Button>
       </header>
-    </div>
-  );
-};
+    </div >
+  )
+}
 
-export default Header;
+export default Header

@@ -1,6 +1,6 @@
-import JoinUs from "../JoinUs";
-import { Button } from "../core/Button";
-import AnimatedBanner from "./AnimatedBanner";
+import JoinUs from "../JoinUs"
+import { Button } from "../core/Button"
+import AnimatedBanner from "./AnimatedBanner"
 
 const Hero = () => {
   return (
@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
 
           <img
-            className="absolute md:right-0 bottom-0 md:z-10 -z-10 md:h-auto h-[72%] left-[148px] md:left-[unset]"
+            className="absolute md:right-0 bottom-0 md:z-10 -z-10 md:h-[110%] h-[72%] left-[148px] md:left-[unset]"
             src="/Dino5.png"
             alt="Dinosaur Illustration"
           />
@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
