@@ -7,13 +7,13 @@ export default {
   theme: {
     container: {
       // center: true,
-      // padding: {
-      //   DEFAULT: '1.25rem',
-      //   // sm: '1.25rem',
-      //   // lg: '5rem',
-      //   // xl: '5rem',
-      //   // '2xl': '5rem',
-      // },
+      padding: {
+        DEFAULT: '1.25rem',
+        // sm: '1.25rem',
+        // lg: '5rem',
+        // xl: '5rem',
+        // '2xl': '5rem',
+      },
     },
     extend: {
       fontFamily: {
