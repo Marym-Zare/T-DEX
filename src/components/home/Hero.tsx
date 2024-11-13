@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="full-height flex-col flex md:overflow-auto overflow-hidden">
       <AnimatedBanner />
       <div className="flex flex-col md:flex-row md:gap-x-11 md:justify-start w-full container mx-auto flex-grow">
-        <div className="relative w-full md:w-auto md:flex-grow md:h-full background-border mb-6 md:mb-0 h-[504px]">
+        <div className="relative w-full md:w-auto md:flex-grow md:h-full background-border -z-10 mb-6 md:mb-0 h-[504px]">
           <div className="absolute md:left-5 left-3 md:top-5 top-3 text-left text-white">
             <p className="md:text-lg text-base font-normal">Welcome to T-DEX</p>
             <h1 className="2xl:text-[64px] text-[32px] lg:text-[40px] lg:leading-[35px] font-bold 2xl:leading-[52px] leading-[32px] md:mt-0 mt-3 md:mb-8 mb-4">
